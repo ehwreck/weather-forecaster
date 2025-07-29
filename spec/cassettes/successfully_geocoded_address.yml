@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1600+Pennsylvania+Ave+NW%2C+Washington%2C+DC+20500&key=AIzaSyAVMJ-Z40VMIYvlREaoei8X02F9OpQn6PA
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1600+Pennsylvania+Ave+NW%2C+Washington%2C+DC+20500&key=<GOOGLE_MAPS_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       content-type:
       - application/json; charset=UTF-8
       date:
-      - Tue, 29 Jul 2025 05:06:34 GMT
+      - Tue, 29 Jul 2025 06:12:22 GMT
       pragma:
       - no-cache
       expires:
@@ -45,7 +45,7 @@ http_interactions:
       x-frame-options:
       - SAMEORIGIN
       server-timing:
-      - gfet4t7; dur=46
+      - gfet4t7; dur=109
       alt-svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
@@ -94,5 +94,5 @@ http_interactions:
         \              ]\n            }\n         ],\n         \"place_id\" : \"ChIJ_3sS4by3t4kRmun7FZMleyI\",\n
         \        \"types\" : \n         [\n            \"street_address\",\n            \"subpremise\"\n
         \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
-  recorded_at: Tue, 29 Jul 2025 05:06:34 GMT
+  recorded_at: Tue, 29 Jul 2025 06:12:22 GMT
 recorded_with: VCR 6.3.1

@@ -1,6 +1,7 @@
 require 'vcr'
 
 VCR.configure do |c|
+  c.filter_sensitive_data("<GOOGLE_MAPS_API_KEY>") { ENV["GOOGLE_MAPS_API_KEY"] }
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :faraday
   c.configure_rspec_metadata!

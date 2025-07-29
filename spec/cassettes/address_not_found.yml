@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://maps.googleapis.com/maps/api/geocode/json?address=some+really+fake+address&key=AIzaSyAVMJ-Z40VMIYvlREaoei8X02F9OpQn6PA
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=some+really+fake+address&key=<GOOGLE_MAPS_API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       content-type:
       - application/json; charset=UTF-8
       date:
-      - Tue, 29 Jul 2025 05:42:34 GMT
+      - Tue, 29 Jul 2025 06:12:22 GMT
       pragma:
       - no-cache
       expires:
@@ -43,7 +43,7 @@ http_interactions:
       x-frame-options:
       - SAMEORIGIN
       server-timing:
-      - gfet4t7; dur=19
+      - gfet4t7; dur=54
       alt-svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     body:
@@ -53,5 +53,5 @@ http_interactions:
            "results" : [],
            "status" : "ZERO_RESULTS"
         }
-  recorded_at: Tue, 29 Jul 2025 05:42:34 GMT
+  recorded_at: Tue, 29 Jul 2025 06:12:22 GMT
 recorded_with: VCR 6.3.1
