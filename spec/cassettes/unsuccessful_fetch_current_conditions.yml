@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://weather.googleapis.com/v1/currentConditions:lookup?key=<GOOGLE_MAPS_API_KEY>&location.latitude=A&location.longitude=B&unitsSystem=IMPERIAL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      vary:
+      - Origin, X-Origin, Referer
+      content-type:
+      - application/json; charset=UTF-8
+      content-encoding:
+      - gzip
+      date:
+      - Tue, 29 Jul 2025 17:30:20 GMT
+      server:
+      - ESF
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff
+      server-timing:
+      - gfet4t7; dur=73
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "Invalid value at 'location.longitude' (TYPE_DOUBLE), \"B\"\nInvalid value at 'location.latitude' (TYPE_DOUBLE), \"A\"",
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.BadRequest",
+                "fieldViolations": [
+                  {
+                    "field": "location.longitude",
+                    "description": "Invalid value at 'location.longitude' (TYPE_DOUBLE), \"B\""
+                  },
+                  {
+                    "field": "location.latitude",
+                    "description": "Invalid value at 'location.latitude' (TYPE_DOUBLE), \"A\""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+  recorded_at: Tue, 29 Jul 2025 17:30:20 GMT
+recorded_with: VCR 6.3.1

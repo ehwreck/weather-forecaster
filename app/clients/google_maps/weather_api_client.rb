@@ -4,10 +4,16 @@ class GoogleMaps::WeatherApiClient < GoogleMaps::GoogleMapsApiClient
     end
 
     def fetch_current_conditions(latitude, longitude)
-        @connection.get("/v1/currentConditions:lookup") do |req|
+        response = @connection.get("/v1/currentConditions:lookup") do |req|
             req.params["location.latitude"] = latitude
             req.params["location.longitude"] = longitude
             req.params["unitsSystem"] = "IMPERIAL"
         end
+
+        unless response.success?
+            handle_error response, "Error fetching current conditions for lat: #{latitude} and long: #{longitude}. Status code: #{response.status}"
+        end
+
+        JSON.parse(response.body)
     end
 end
