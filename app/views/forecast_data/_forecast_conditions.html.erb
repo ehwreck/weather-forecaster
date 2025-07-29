@@ -1,0 +1,5 @@
+<div id="forecast-data" class="flex flex-col justify-center items-center h-full">
+  <p class="text-lg"><%= current_conditions["weatherCondition"]["description"]["text"].split(" ").map(&:capitalize).join(" ") %></p>
+  <p class="text-8xl"><%= current_conditions["temperature"]["degrees"] %></p>
+  <p>H: <%= current_conditions["currentConditionsHistory"]["minTemperature"]["degrees"] %>/ L: <%= current_conditions["currentConditionsHistory"]["maxTemperature"]["degrees"] %></p>
+</div>
