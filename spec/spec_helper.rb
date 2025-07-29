@@ -1,4 +1,9 @@
 require 'vcr'
+require 'simplecov'
+
+SimpleCov.start 'rails' do
+  enable_coverage :branch
+end
 
 VCR.configure do |c|
   c.filter_sensitive_data("<GOOGLE_MAPS_API_KEY>") { ENV["GOOGLE_MAPS_API_KEY"] }
