@@ -13,5 +13,10 @@ module GoogleMaps
         params: { "key" => api_key }
       )
     end
+
+    def handle_error(response, error_message)
+      Rails.logger.error("#{error_message}. Response body: #{response.body}")
+      raise StandardError, error_message
+    end
   end
 end
