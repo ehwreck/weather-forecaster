@@ -6,19 +6,21 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+3.4.1
 
 * System dependencies
+Rails 8.0.2
+Node 24.4.1
+Yarn
 
 * Configuration
+No configurations needed yet.
 
-* Database creation
+* Database setup
+Run `bin/rails db:create db:migrate`
 
-* Database initialization
+* Seeding your database
+Run `bin/rails db:seed`
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run `bin/rails rspec`
