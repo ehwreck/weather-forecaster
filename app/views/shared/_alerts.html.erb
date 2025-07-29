@@ -1,0 +1,7 @@
+<div class="absolute bottom-0 w-full" id="shared-alerts">
+  <div class="flex flex-row justify-center items-center p-6">
+    <% alerts.each do |a| %>
+      <div class="bg-red-300 text-lg p-2 rounded-md"><%= a[:message] %></div>
+    <% end %>
+  </div>
+</div>
