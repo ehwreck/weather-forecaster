@@ -1,3 +1,3 @@
 <%= turbo_stream.replace("forecast-data") do %>
-  <%= render "forecast_conditions", current_conditions: @current_conditions %>
+  <%= render "forecast_conditions", current_conditions: @current_conditions, cached: @cached %>
 <% end %>
