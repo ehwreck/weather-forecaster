@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=some+really+fake+address&key=AIzaSyAVMJ-Z40VMIYvlREaoei8X02F9OpQn6PA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Tue, 29 Jul 2025 05:42:34 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      vary:
+      - Accept-Language
+      access-control-allow-origin:
+      - "*"
+      content-security-policy-report-only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:214:0
+      cross-origin-opener-policy-report-only:
+      - same-origin; report-to=msaifdggmnwc:214:0
+      report-to:
+      - '{"group":"msaifdggmnwc:214:0","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:214:0"}],}'
+      server:
+      - mafe
+      content-length:
+      - '51'
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      server-timing:
+      - gfet4t7; dur=19
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+  recorded_at: Tue, 29 Jul 2025 05:42:34 GMT
+recorded_with: VCR 6.3.1
