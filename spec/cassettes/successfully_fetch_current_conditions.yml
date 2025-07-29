@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://weather.googleapis.com/v1/currentConditions:lookup?key=<GOOGLE_MAPS_API_KEY>&location.latitude=38.89771400000001&location.longitude=-77.0365461&unitsSystem=IMPERIAL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      vary:
+      - Origin, X-Origin, Referer
+      content-encoding:
+      - gzip
+      date:
+      - Tue, 29 Jul 2025 15:27:47 GMT
+      server:
+      - ESF
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff
+      server-timing:
+      - gfet4t7; dur=103
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "currentTime": "2025-07-29T15:27:47.921972587Z",
+          "timeZone": {
+            "id": "America/New_York"
+          },
+          "isDaytime": true,
+          "weatherCondition": {
+            "iconBaseUri": "https://maps.gstatic.com/weather/v1/party_cloudy",
+            "description": {
+              "text": "Partly sunny",
+              "languageCode": "en"
+            },
+            "type": "PARTLY_CLOUDY"
+          },
+          "temperature": {
+            "degrees": 89.9,
+            "unit": "FAHRENHEIT"
+          },
+          "feelsLikeTemperature": {
+            "degrees": 96.9,
+            "unit": "FAHRENHEIT"
+          },
+          "dewPoint": {
+            "degrees": 70.8,
+            "unit": "FAHRENHEIT"
+          },
+          "heatIndex": {
+            "degrees": 96.9,
+            "unit": "FAHRENHEIT"
+          },
+          "windChill": {
+            "degrees": 89.9,
+            "unit": "FAHRENHEIT"
+          },
+          "relativeHumidity": 54,
+          "uvIndex": 6,
+          "precipitation": {
+            "probability": {
+              "percent": 5,
+              "type": "RAIN"
+            },
+            "snowQpf": {
+              "quantity": 0,
+              "unit": "INCHES"
+            },
+            "qpf": {
+              "quantity": 0,
+              "unit": "INCHES"
+            }
+          },
+          "thunderstormProbability": 0,
+          "airPressure": {
+            "meanSeaLevelMillibars": 1016.93
+          },
+          "wind": {
+            "direction": {
+              "degrees": 180,
+              "cardinal": "SOUTH"
+            },
+            "speed": {
+              "value": 1,
+              "unit": "MILES_PER_HOUR"
+            },
+            "gust": {
+              "value": 1,
+              "unit": "MILES_PER_HOUR"
+            }
+          },
+          "visibility": {
+            "distance": 10,
+            "unit": "MILES"
+          },
+          "cloudCover": 57,
+          "currentConditionsHistory": {
+            "temperatureChange": {
+              "degrees": 2,
+              "unit": "FAHRENHEIT"
+            },
+            "maxTemperature": {
+              "degrees": 93.7,
+              "unit": "FAHRENHEIT"
+            },
+            "minTemperature": {
+              "degrees": 76.7,
+              "unit": "FAHRENHEIT"
+            },
+            "snowQpf": {
+              "quantity": 0,
+              "unit": "INCHES"
+            },
+            "qpf": {
+              "quantity": 0,
+              "unit": "INCHES"
+            }
+          }
+        }
+  recorded_at: Tue, 29 Jul 2025 15:27:47 GMT
+recorded_with: VCR 6.3.1

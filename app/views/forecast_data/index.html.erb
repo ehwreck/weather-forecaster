@@ -1,0 +1,14 @@
+<div class="flex flex-row w-full justify-between">
+  <h1 class="text-3xl">Weather Forecaster</h1>
+  <div class="flex flex-row justify-end">
+    <%= form_with url: forecast_data_path, class: "flex flex-row" do |f| %>
+      <%= f.text_field 'address', placeholder: 'Enter address', class: 'w-200 bg-slate-200 rounded-l-md text-xl px-4 py-2', required: true %>
+      <%= f.submit class: "flex flex-row justify-center items-center p-3 bg-slate-900 hover:bg-slate-600 text-white rounded-r-md cursor-pointer" do %>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="font-sans w-100" id="forecast-data"></div>

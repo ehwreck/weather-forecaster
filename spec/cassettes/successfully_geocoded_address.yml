@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=1600+Pennsylvania+Ave+NW%2C+Washington%2C+DC+20500&key=<GOOGLE_MAPS_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Tue, 29 Jul 2025 06:12:22 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, must-revalidate
+      vary:
+      - Accept-Language
+      access-control-allow-origin:
+      - "*"
+      x-goog-maps-metro-area:
+      - Washington, DC
+      content-security-policy-report-only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:214:0
+      cross-origin-opener-policy-report-only:
+      - same-origin; report-to=msaifdggmnwc:214:0
+      report-to:
+      - '{"group":"msaifdggmnwc:214:0","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:214:0"}],}'
+      server:
+      - mafe
+      content-length:
+      - '3376'
+      x-xss-protection:
+      - '0'
+      x-frame-options:
+      - SAMEORIGIN
+      server-timing:
+      - gfet4t7; dur=109
+      alt-svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"1600\",\n
+        \              \"short_name\" : \"1600\",\n               \"types\" : \n               [\n
+        \                 \"street_number\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Pennsylvania Avenue Northwest\",\n               \"short_name\"
+        : \"Pennsylvania Ave NW\",\n               \"types\" : \n               [\n
+        \                 \"route\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Northwest Washington\",\n               \"short_name\"
+        : \"Northwest Washington\",\n               \"types\" : \n               [\n
+        \                 \"neighborhood\",\n                  \"political\"\n               ]\n
+        \           },\n            {\n               \"long_name\" : \"Washington\",\n
+        \              \"short_name\" : \"Washington\",\n               \"types\"
+        : \n               [\n                  \"locality\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"District of Columbia\",\n               \"short_name\" : \"DC\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"United States\",\n               \"short_name\"
+        : \"US\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"20500\",\n               \"short_name\" :
+        \"20500\",\n               \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"0005\",\n               \"short_name\" : \"0005\",\n               \"types\"
+        : \n               [\n                  \"postal_code_suffix\"\n               ]\n
+        \           }\n         ],\n         \"formatted_address\" : \"1600 Pennsylvania
+        Ave NW, Washington, DC 20500, USA\",\n         \"geometry\" : \n         {\n
+        \           \"location\" : \n            {\n               \"lat\" : 38.89771400000001,\n
+        \              \"lng\" : -77.0365461\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 38.8991179302915,\n                  \"lng\"
+        : -77.03447746970851\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 38.8964199697085,\n                  \"lng\"
+        : -77.03717543029153\n               }\n            }\n         },\n         \"navigation_points\"
+        : \n         [\n            {\n               \"location\" : \n               {\n
+        \                 \"latitude\" : 38.8975925,\n                  \"longitude\"
+        : -77.03516399999999\n               },\n               \"restricted_travel_modes\"
+        : \n               [\n                  \"WALK\"\n               ]\n            },\n
+        \           {\n               \"location\" : \n               {\n                  \"latitude\"
+        : 38.8978483,\n                  \"longitude\" : -77.0365472\n               },\n
+        \              \"restricted_travel_modes\" : \n               [\n                  \"DRIVE\"\n
+        \              ]\n            }\n         ],\n         \"place_id\" : \"ChIJ_3sS4by3t4kRmun7FZMleyI\",\n
+        \        \"types\" : \n         [\n            \"street_address\",\n            \"subpremise\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Tue, 29 Jul 2025 06:12:22 GMT
+recorded_with: VCR 6.3.1
