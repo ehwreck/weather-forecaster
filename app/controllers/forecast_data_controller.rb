@@ -15,7 +15,7 @@ class ForecastDataController < ApplicationController
         @current_conditions = FetchAddressCurrentConditionsService.new(address).call
         Rails.cache.write(zip, @current_conditions, expires_in: 30.minutes)
       rescue StandardError => e
-        @alerts = [{ type: 'error', message: e.message }]
+        @alerts = [ { type: "error", message: e.message } ]
         invalid_address_response
       end
     end
