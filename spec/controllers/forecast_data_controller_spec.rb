@@ -21,7 +21,7 @@ RSpec.describe ForecastDataController, type: :controller do
     end
 
     it 'returns 422 if the request is not successfull and responds with turbo_stream invalid_address' do
-      response = with_google_maps_cassettes do
+      response = with_unsuccessful_google_maps_cassettes do
         post :create, params: { address: "some fake address" }, format: :turbo_stream
       end
 
@@ -33,6 +33,14 @@ RSpec.describe ForecastDataController, type: :controller do
   def with_google_maps_cassettes
     VCR.use_cassette("successfully_geocoded_address") do
       VCR.use_cassette("successfully_fetch_current_conditions") do
+        yield
+      end
+    end
+  end
+
+  def with_unsuccessful_google_maps_cassettes
+    VCR.use_cassette("address_not_found") do
+      VCR.use_cassette("unsuccessful_fetch_current_conditions") do
         yield
       end
     end
