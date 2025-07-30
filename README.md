@@ -6,8 +6,6 @@ A Ruby on Rails application that fetches and displays weather data based on user
 
 - Ruby: 3.4.1
 - Rails: 8.0.2
-- Node.js: 24.4.1
-- Yarn
 
 ## ⚙️ Local Setup
 
