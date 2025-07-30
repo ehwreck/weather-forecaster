@@ -26,4 +26,3 @@ RSpec.describe ForecastDataController, type: :controller do
     end
   end
 end
-
