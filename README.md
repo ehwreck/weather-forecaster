@@ -1,24 +1,92 @@
-# README
+# 🌤️ Weather Forecast App
 
-## Ruby Version
-3.4.1
+A Ruby on Rails application that fetches and displays weather data based on user-provided addresses, using the Google Maps APIs.
 
-## System dependencies
-- Rails 8.0.2
-- Node 24.4.1
+## 🧰 System Requirements
+
+- Ruby: 3.4.1
+- Rails: 8.0.2
+- Node.js: 24.4.1
 - Yarn
 
-## Setup application locally
-Run `bin/setup`
+## ⚙️ Local Setup
 
-## Run database migrations
-Run `bin/rails db:migrate`
+1. Clone the repository:
 
-## Seeding your database (optional)
-Run `bin/rails db:seed`
+```bash
+git clone https://github.com/ehwreck/weather-forecaster.git
+cd weather-forecaster
+```
 
-## How to run the test suite
-Run `bin/rails rspec`
+2. Install dependencies & set up the app:
 
-## Running application locally
-Run `bin/dev`
+```bash
+bin/setup
+```
+
+3. Set up your environment variables:
+
+```bash
+cp .env.sample .env
+# Then add your Google Maps API key in the .env file
+```
+
+## 🗃️ Database
+
+1. Run Migrations
+
+```bash
+bin/rails db:migrate
+```
+
+2. Seed the Database (Optional)
+
+```bash
+bin/rails db:seed
+```
+
+## 🧪 Running Tests
+
+```bash
+bin/rspec
+```
+
+## 🚀 Start the Application Locally
+
+```bash
+bin/dev
+```
+
+Visit http://localhost:3000 in your browser.
+
+## 🌐 Google Maps API
+
+This app uses the Google Maps Geocoding and Weather APIs. (https://console.cloud.google.com/)
+
+### Steps to enable:
+
+1. Go to the Google Cloud Console.
+2. Create a project and enable the following APIs:
+
+- Geocoding API
+- Weather API
+
+3. Generate an API key.
+4. Add the key to your .env file as:
+
+```env
+GOOGLE_MAPS_API_KEY=<placeholder>
+```
+
+## ✅ Features
+
+- Address geocoding with Google Maps API
+- Weather data fetching with caching on zip code for 30 minutes
+- Error handling for invalid addresses
+- Clean, Turbo-powered frontend
+
+## 🧠 Notes
+
+- The zip code is extracted from the address to cache weather data.
+- Weather responses are cached for 30 minutes using Rails.cache.
+- Turbo Streams is used for smooth UI updates.
