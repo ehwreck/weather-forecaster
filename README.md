@@ -2,6 +2,8 @@
 
 A Ruby on Rails application that fetches and displays weather data based on user-provided addresses, using the Google Maps APIs.
 
+Live Demo: https://weather-forecaster-app-5126b600d5a5.herokuapp.com/
+
 ## 🧰 System Requirements
 
 - Ruby: 3.4.1
