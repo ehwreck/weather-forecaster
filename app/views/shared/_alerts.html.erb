@@ -1,0 +1,5 @@
+<div class="flex flex-row justify-center items-center p-6">
+  <% alerts.present? && alerts.each do |a| %>
+    <div class="bg-red-300 text-lg p-2 rounded-md"><%= a[:message] %></div>
+  <% end %>
+</div>
