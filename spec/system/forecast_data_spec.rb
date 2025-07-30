@@ -6,7 +6,7 @@ RSpec.describe 'Forecast Data', type: :system, js: true do
   it 'allows me to get current conditions for an address' do
     visit '/'
 
-    fill_in "Enter address", :with => "1600 Pennsylvania Ave NW, Washington, DC 20500"
+    fill_in "Enter address", with: "1600 Pennsylvania Ave NW, Washington, DC 20500"
 
     with_google_maps_cassettes { click_button }
 
@@ -21,7 +21,7 @@ RSpec.describe 'Forecast Data', type: :system, js: true do
     allow(FetchAddressCurrentConditionsService).to receive(:new).and_return(service_double)
     allow(service_double).to receive(:call).and_raise(StandardError, "Unable to geocode some fake address. Error: ZERO_RESULTS")
 
-    fill_in "Enter address", :with => "some fake address"
+    fill_in "Enter address", with: "some fake address"
 
     click_button
 
