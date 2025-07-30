@@ -25,7 +25,7 @@ class ForecastDataController < ApplicationController
 
   def invalid_address_response
     respond_to do |format|
-      format.turbo_stream { render :invalid_address }
+      format.turbo_stream { render :invalid_address, status: :unprocessable_entity }
       format.html { redirect_to :index }
     end
   end
